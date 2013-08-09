@@ -1,0 +1,42 @@
+{
+  "name": "fusing_fields",
+  "version": "1.0.0",
+  "description": "Module to give the ability to fuse form fields",
+  "main": "",
+  "author": {
+    "name": "Jean-cédric Thérond",
+    "email": "jean.cedric.t@gmail.com"
+  },
+  "keywords": [],
+  "homepage": "",
+  "licenses": [
+    {
+      "type": "GPL-3.0",
+      "url": "http://www.gnu.org/licenses/gpl-3.0.html"
+    }
+  ],
+  "scripts": {
+    "build": "grunt build"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "stylus": "*",
+    "grunt": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-stylus": "*"
+  },
+  "engine": "node >= 0.9.1",
+  "directories": {
+    "destCss": ".",
+    "destJs": ".",
+    "images": "images",
+    "srcJs": "src/js",
+    "srcCss": "src/css",
+    "srcStylus": "src/stylus",
+    "fonts": "fonts"
+  }
+}

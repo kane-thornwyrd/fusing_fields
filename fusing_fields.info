@@ -1,0 +1,12 @@
+name = Fusing Fields
+description = A way to fuse form fields together.
+package = other
+core = 7.x
+configure = admin/config/user-interface/fusing_fields
+
+dependencies[] = elements
+dependencies[] = placeholder
+
+files[] = theme/theme.inc
+; files[] = theme/admin-toolbar.tpl.php
+

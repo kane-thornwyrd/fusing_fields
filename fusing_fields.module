@@ -1,0 +1,80 @@
+<?php
+/**
+ * @file
+ * Main Fusing Buttons file.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function fusing_fields_theme($cache, $type, $theme, $path) {
+  $path = drupal_get_path('module', 'fusing_fields');
+  $themes = array();
+
+  $themes['fused_fields'] = array(
+    'path' => $path . '/theme',
+    'file' => 'theme.inc',
+    'arguments' => array('element' => NULL),
+    'render element' => 'element',
+    'template' => 'fused_fields'
+  );
+
+  return $themes;
+}
+
+// function theme_fused_fields(&$variables){
+//   dpm(func_get_args());
+//   dpm($variables);
+
+//   return 'okokook';
+// }
+
+/**
+ * Implements hook_permission().
+ */
+function fusing_fields_permission() {
+  return array(
+    'administrate fusing fields' => array(
+      'title' => 'Administrate fusing fields'
+    )
+  );
+}
+
+/**
+ * Implements hook_menu().
+ */
+function fusing_fields_menu() {
+  $menu = array();
+
+  $menu['admin/config/user-interface/fusing_fields'] = array(
+    'title'            => 'Fusing Fields',
+    'page callback'    => 'drupal_get_form',
+    'page arguments'   => array('fusing_fields_demo_form'),
+    'access callback'  => 'user_access',
+    'access arguments' => array('administer site configuration'),
+    'type'             => MENU_NORMAL_ITEM,
+    'file'             => 'admin.inc',
+    'module'           => 'admin'
+  );
+
+  return $menu;
+}
+
+function fused_fields(array $fields){
+  $out = array(
+    '#attached' => array(
+      'css' => array(
+        drupal_get_path('module', 'fusing_fields') . '/css/fusing_fields.css',
+      )
+    ),
+
+
+    '#theme' => 'fused_fields',
+    '#attributes' => array(
+      'class' => array('fused-fields')
+    )
+  );
+  foreach($fields as $field_id => $field){$out[$field_id] = $field;}
+  return $out;
+}
+
