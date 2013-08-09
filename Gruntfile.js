@@ -45,6 +45,12 @@ module.exports = function(grunt) {
           '<%= pkg.directories.srcJs %>/<%= filesTypes.js %>'
         ],
         tasks: ['jshint', 'uglify'],
+      },
+      stylus: {
+        files: [
+          '<%= pkg.directories.srcStylus %>/<%= filesTypes.stylus %>'
+        ],
+        tasks: ['stylus'],
       }
     },
     stylus: {
