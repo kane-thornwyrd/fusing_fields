@@ -1,0 +1,17 @@
+box-shadow()
+  -moz-box-shadow arguments
+  -webkit-box-shadow arguments
+  box-shadow arguments
+
+block-shadow(w)
+  position relative
+  &:before
+    background-clip border-box
+    content ""
+    position absolute
+    display block
+    left w * -1
+    top w * -1
+    bottom w * -1
+    right w * -1
+    z-index -1
