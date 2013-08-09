@@ -64,14 +64,16 @@ function fused_fields(array $fields){
   $out = array(
     '#attached' => array(
       'css' => array(
-        drupal_get_path('module', 'fusing_fields') . '/css/fusing_fields.css',
+        drupal_get_path('module', 'fusing_fields') . '/fusing_fields.css',
       )
     ),
 
-
     '#theme' => 'fused_fields',
     '#attributes' => array(
-      'class' => array('fused-fields')
+      'class' => array(
+        'form-item',
+        'fused-fields',
+      )
     )
   );
   foreach($fields as $field_id => $field){$out[$field_id] = $field;}

@@ -23,6 +23,7 @@
   "devDependencies": {
     "stylus": "*",
     "grunt": "*",
+    "canvas": "*",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-jshint": "*",
     "grunt-contrib-watch": "*",

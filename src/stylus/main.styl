@@ -1,2 +1,27 @@
-a
-  color red
+@import 'nib'
+@import 'utils'
+
+.fused-fields
+  background-clip padding-box
+  position relative
+  padding 0
+  margin 0
+  block-shadow( 2px )
+  border 1px solid black
+  overflow hidden
+
+  & > *, *[type="input"], *[type="email"]
+    padding 0 !important
+    margin 0 !important
+    background-clip padding-box
+    display inline-block
+    position relative
+    border none !important
+    background none !important
+    font-size 1em
+    height 1em
+    line-height 1em
+
+@media only screen and (min-width : 768px)
+  .fused-fields
+    block-shadow( 10px )

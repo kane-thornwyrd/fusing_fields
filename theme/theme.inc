@@ -7,7 +7,6 @@ function template_preprocess_fused_fields(&$variables){
     $variables['fields'][$field_name] = drupal_render($variables['element'][$field_name]);
     unset($variables['element'][$field_name]);
   }
-  dpm($variables['fields']);
 
   return $variables;
 }
