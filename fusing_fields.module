@@ -22,13 +22,6 @@ function fusing_fields_theme($cache, $type, $theme, $path) {
   return $themes;
 }
 
-// function theme_fused_fields(&$variables){
-//   dpm(func_get_args());
-//   dpm($variables);
-
-//   return 'okokook';
-// }
-
 /**
  * Implements hook_permission().
  */

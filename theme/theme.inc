@@ -10,9 +10,3 @@ function template_preprocess_fused_fields(&$variables){
 
   return $variables;
 }
-
-function theme_fused_fields($variables){
-  $elements = $variables['element'];
-
-  return 'okokok';
-}
