@@ -1,1 +1,59 @@
-  [90mcompiled[0m src/stylus/main.css
+.fused-fields {
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  border: 1px solid #000;
+  overflow: hidden;
+  color: #555;
+}
+.fused-fields:before {
+  -webkit-background-clip: border;
+  -moz-background-clip: border;
+  background-clip: border-box;
+  content: "";
+  position: absolute;
+  display: block;
+  left: -2px;
+  top: -2px;
+  bottom: -2px;
+  right: -2px;
+  z-index: -1;
+}
+.fused-fields > *,
+.fused-fields *[type="input"],
+.fused-fields *[type="email"] {
+  padding: 0;
+  margin: 0;
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  display: inline-block;
+  position: relative;
+  border: none;
+  background: none;
+  font-size: 1em;
+  height: 1em;
+  line-height: 1em;
+}
+@media only screen and (min-width : 768px) {
+  .fused-fields {
+    position: relative;
+  }
+  .fused-fields:before {
+    -webkit-background-clip: border;
+    -moz-background-clip: border;
+    background-clip: border-box;
+    content: "";
+    position: absolute;
+    display: block;
+    left: -10px;
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    z-index: -1;
+  }
+}
